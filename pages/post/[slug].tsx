@@ -43,7 +43,7 @@ const Post = ({ post }: Props) => {
         src={urlFor(post.mainImage).url()!}
         alt={post.title}
       />
-      <article className="mx-auto max-w-3xl p-5">
+      <article className="mx-auto max-w-3xl  p-5">
         <h1 className="mt-10 mb-3 text-3xl">{post.title}</h1>
         <h2 className="mb-2 text-xl font-light text-gray-500">
           {post.description}
