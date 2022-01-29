@@ -1,17 +1,30 @@
 export default {
-    name: 'comments',
-    title: 'Comments',
-    type: 'document',
-    fields: [
-      {
-        name: 'title',
-        title: 'Title',
-        description: 'Keep Titles Short!',
-        type: 'string',
-      },
-      {
-        name: 'description',
-        title: 'Description',
-        type: 'string',
-      },   
+  name: 'comment',
+  title: 'Comment',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+    },
+    {
+      title: 'Approved',
+      name: 'approved',
+      type: 'boolean',
+      description: "Comments wont' show unless approved",
+    },
+    {
+      name: 'email',
+      type: 'string',
+    },
+    {
+      name: 'comment',
+      type: 'text',
+    },
+    {
+      name: 'post',
+      type: 'reference',
+      to: [{ type: 'post' }],
+    },
+  ],
 }
